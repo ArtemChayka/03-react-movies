@@ -21,7 +21,6 @@ export default function App() {
       setMovies([]); 
 
       const response = await fetchMovies(query);
-      console.log(response);
       
 
       if (response.results.length === 0) {

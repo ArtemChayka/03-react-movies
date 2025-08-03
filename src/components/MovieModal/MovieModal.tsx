@@ -16,14 +16,10 @@ const MovieModal: React.FC<MovieModalProps> = ({ movie, onClose }) => {
       }
     };
 
-    // Disable body scroll
     document.body.style.overflow = "hidden";
-
-    // Add escape key listener
     document.addEventListener("keydown", handleEscape);
-
     return () => {
-      // Cleanup
+    
       document.body.style.overflow = "unset";
       document.removeEventListener("keydown", handleEscape);
     };
